@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.electricitybillingsystem.newCustomer"
+            prefHeight="670.0" prefWidth="1050.0" style="-fx-background-color: CCFFE5;">
+    <children>
+        <Label text="New Customer" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" style="-fx-font-size: 70px; -fx-font-family: 'Times New Roman';" alignment="CENTER"/>
+
+        <Label text="Name: " layoutX="50.0" layoutY="170.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="nameText" promptText="Enter your name" layoutX="350.0" layoutY="170.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Meter Number: " layoutX="50.0" layoutY="220.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="meterNumText"  layoutX="380.0" layoutY="220.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Address: " layoutX="50.0" layoutY="270.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="addressText" promptText="Enter your address" layoutX="350.0" layoutY="270.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="City: " layoutX="50.0" layoutY="320.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="cityText" layoutX="350.0" promptText="Enter your city" layoutY="320.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+        <Label text="Email: " layoutX="50.0" layoutY="420.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="emailText" promptText="Enter your email" layoutX="350.0" layoutY="420.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Mobile Number: " layoutX="50.0" layoutY="470.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="phoneText" promptText="Enter your mobile number" layoutX="350.0" layoutY="470.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+
+        <ImageView layoutX="700.0" layoutY="170.0" fitHeight="300" fitWidth="300">
+            <Image url="@icon/newCustomerBoy.png"/>
+        </ImageView>
+
+        <Button text="Next" fx:id="next" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="60.0" prefWidth="200.0" prefHeight="30.0" style="-fx-font-size: 25px; -fx-font-family: 'Times New Roman';" onAction="#handleNextButton"/>
+        <Button text="Cancel" fx:id="close" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="60.0" prefWidth="200.0" prefHeight="30.0" style="-fx-font-size: 25px; -fx-font-family: 'Times New Roman';" onAction="#handleCancelAction"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.electricitybillingsystem.meterInformation"
+            prefHeight="670.0" prefWidth="1050.0" style="-fx-background-color: FFFF99;">
+    <children>
+        <Label text="Meter Information" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" style="-fx-font-size: 70px; -fx-font-family: 'Times New Roman';" alignment="CENTER"/>
+
+        <Label text="Meter Number: " layoutX="50.0" layoutY="170.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="meterNumText" layoutX="380.0" layoutY="170.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Meter Location: " layoutX="50.0" layoutY="220.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <ChoiceBox fx:id="meterLocationChoice" layoutX="350.0" layoutY="220.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Outside" />
+                    <String fx:value="Inside" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label text="Meter Type: " layoutX="50.0" layoutY="270.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <ChoiceBox fx:id="meterTypeChoice" layoutX="350.0" layoutY="270.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Electric Meter" />
+                    <String fx:value="Solar Meter" />
+                    <String fx:value="Smart Meter" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label text="Phase Code: " layoutX="50.0" layoutY="320.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <ChoiceBox fx:id="phaseCodeChoice" layoutX="350.0" layoutY="320.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="011" />
+                    <String fx:value="022" />
+                    <String fx:value="033" />
+                    <String fx:value="044" />
+                    <String fx:value="055" />
+                    <String fx:value="066" />
+                    <String fx:value="077" />
+                    <String fx:value="088" />
+                    <String fx:value="099" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label text="Bill Type: " layoutX="50.0" layoutY="370.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <ChoiceBox fx:id="billTypeChoice" layoutX="350.0" layoutY="370.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Normal" />
+                    <String fx:value="Industrial" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <ImageView layoutX="700.0" layoutY="170.0" fitHeight="300" fitWidth="300">
+            <Image url="@icon/electric-meter.png"/>
+        </ImageView>
+
+
+        <Button fx:id="submit" text="Submit" onAction="#onButtonClick"
+                AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="480.0"
+                prefWidth="200.0" prefHeight="35.0"
+                style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman'; -fx-background-color: black; -fx-text-fill: white;"/>
+    </children>
+
+</AnchorPane>

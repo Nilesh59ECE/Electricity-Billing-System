@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.electricitybillingsystem.CalculateBill"
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: CCE5FF">
+    <children>
+        <Label text="Calculate Bill" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" style="-fx-font-size: 70px; -fx-font-family: 'Times New Roman';" alignment="CENTER"/>
+
+        <Label text="Meter Number: " layoutX="50.0" layoutY="170.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="searchTextField" promptText="Enter your meter number" layoutX="300.0" layoutY="170.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Name: " layoutX="50.0" layoutY="220.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="nameText" layoutX="350.0" layoutY="220.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 25px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Address: " layoutX="50.0" layoutY="270.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="addressText" layoutX="300.0" layoutY="270.0" prefWidth="625.0" prefHeight="35.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Unit Consumed: " layoutX="50.0" layoutY="320.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="unitTextField" promptText="Enter unit consumed" layoutX="300.0" layoutY="320.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Month: " layoutX="50.0" layoutY="370.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <ChoiceBox fx:id="monthChoice" layoutX="300.0" layoutY="370.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="January" /><String fx:value="February" />
+                    <String fx:value="March" /><String fx:value="April" />
+                    <String fx:value="May" /><String fx:value="June" />
+                    <String fx:value="July" /><String fx:value="August" />
+                    <String fx:value="September" /><String fx:value="October" />
+                    <String fx:value="November" /><String fx:value="December" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <StackPane layoutX="700.0" layoutY="190.0">
+            <ImageView fitHeight="300" fitWidth="300">
+                <clip>
+                    <Rectangle arcWidth="150" arcHeight="150" width="300" height="300" />
+                </clip>
+                <image>
+                    <Image url="@icon/calculateBill.png" />
+                </image>
+            </ImageView>
+        </StackPane>
+
+        <Button text="Submit" fx:id="submitButton" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="60.0" prefWidth="200.0" prefHeight="35.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman'; -fx-background-color: green; -fx-text-fill: white;" onAction="#handleButtonAction"/>
+        <Button text="Close" fx:id="closeButton" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="60.0" prefWidth="200.0" prefHeight="35.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman'; -fx-background-color: green; -fx-text-fill: white;" onAction="#handleButtonAction"/>
+
+    </children>
+
+</AnchorPane>
