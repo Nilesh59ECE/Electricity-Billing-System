@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.electricitybillingsystem.ViewInformation"
+            prefHeight="670.0" prefWidth="1050.0" style="-fx-background-color: #E0E0E0">
+    <children>
+        <Label text="View Information" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" style="-fx-font-size: 70px; -fx-font-family: 'Times New Roman'; -fx-underline: true; -fx-text-fill: #000000;" alignment="CENTER"/>
+
+        <Label text="Name: " layoutX="50.0" layoutY="170.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="nameLabel" layoutX="300.0" layoutY="170.0" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Meter Number: " layoutX="50.0" layoutY="220.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="meterTextField" promptText="Enter meter number" layoutX="300.0" layoutY="220.0" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Address: " layoutX="50.0" layoutY="270.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="addressLabel" layoutX="300.0" layoutY="270.0" prefWidth="355.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="City: " layoutX="50.0" layoutY="320.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="cityLabel" layoutX="300.0" layoutY="320.0" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Email: " layoutX="50.0" layoutY="370.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="emailLabel" layoutX="300.0" layoutY="370.0" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Phone: " layoutX="50.0" layoutY="420.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="phoneLabel" layoutX="300.0" layoutY="420.0" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Button text="Close" fx:id="Close" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="450.0"  prefWidth="150.0" prefHeight="30.0" style="-fx-font-size: 25px; -fx-font-family: 'Times New Roman'; -fx-background-color: #000000; -fx-text-fill: #FFFFFF" onAction="#actionHandleButton"/>
+    </children>
+
+</AnchorPane>

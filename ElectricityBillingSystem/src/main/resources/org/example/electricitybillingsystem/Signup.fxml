@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.electricitybillingsystem.Signup"
+            prefHeight="400.0" prefWidth="600.0" >
+
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+
+    <children>
+        <Label text="Signup Page" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" style="-fx-font-size: 70px; -fx-font-family: 'Times New Roman';" alignment="CENTER"/>
+
+        <Label text="Create Account As : " layoutX="50.0" layoutY="150.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';" />
+        <ChoiceBox fx:id="loginASChoiceBox" layoutX="350.0" layoutY="150.0" prefWidth="225.0" prefHeight="35.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Employee" />
+                    <String fx:value="Customer" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+
+        <Label fx:id="meterNoLabel" text="Meter Number : " layoutX="50.0" layoutY="220.0" visible="false" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="meterTextField" promptText="Enter your meter number" layoutX="350.0" layoutY="220.0" prefWidth="225.0" prefHeight="35.0" visible="false" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="employerLabel" text="Employer ID : " layoutX="50.0" layoutY="220.0" visible="false" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="employerTextField" promptText="Enter your employee id" layoutX="350.0" layoutY="220.0" prefWidth="225.0" prefHeight="35.0" visible="false" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="userName" text="Email : " layoutX="50.0" layoutY="290.0" visible="false" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="userNameTextField" promptText="Enter your email" layoutX="350.0" layoutY="290.0" prefWidth="225.0" prefHeight="35.0" visible="false" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="Name" text="Name : " layoutX="50.0" layoutY="360.0" visible="false" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="NameTextField" promptText="Enter your name" layoutX="350.0" layoutY="360.0" prefWidth="225.0" prefHeight="35.0" visible="false" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="password" text="Password : " layoutX="50.0" layoutY="430.0" visible="false" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="passwordTextField" promptText="Enter your password" layoutX="350.0" layoutY="430.0" prefWidth="225.0" prefHeight="35.0" visible="false" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+
+        <ImageView layoutX="700.0" layoutY="170.0" fitHeight="250" fitWidth="250">
+            <image>
+                <Image url="@icon/boy.jpg" />
+            </image>
+        </ImageView>
+
+        <Button fx:id="createButton" text="Create" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="60.0" prefWidth="200.0" prefHeight="35.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Button fx:id="backButton" text="Back" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="60.0" prefWidth="200.0" prefHeight="35.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+    </children>
+</AnchorPane>

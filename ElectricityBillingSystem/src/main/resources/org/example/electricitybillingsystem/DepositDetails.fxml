@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.electricitybillingsystem.DepositDetails"
+            prefHeight="670.0" prefWidth="1050.0" style="-fx-background-color: #CCFFCC">
+    <children>
+        <Label text="Deposit Details" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" style="-fx-font-size: 70px; -fx-font-family: 'Times New Roman';" alignment="CENTER"/>
+
+        <Label text="Meter Number:"  layoutX="50.0" layoutY="170.0" style="-fx-font-size: 22px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="searchMeterTextField" promptText="Enter Meter Number" layoutX="220.0" layoutY="170.0" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Month:"  layoutX="500.0" layoutY="170.0" style="-fx-font-size: 22px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="searchMonthTextField" promptText="Enter Month" layoutX="600.0" layoutY="170.0" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 18px; -fx-font-family: 'Times New Roman';"/>
+
+        <Button fx:id="search" text="Search" layoutX="860.0" layoutY="170.0" onAction="#handleActionButton"
+                style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman'; -fx-background-color: red; -fx-text-fill: white; -fx-min-width: 120px; -fx-min-height: 40px;"/>
+
+        <TableView fx:id="table" prefHeight="400.0" prefWidth="400.0" style="-fx-font-size:14px; -fx-font-family: 'Times New Roman'" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+            <columns>
+                <TableColumn text="Meter Number" fx:id="meterNumberCol" prefWidth="150.0"/>
+                <TableColumn text="Month" fx:id="monthCol" prefWidth="100.0"/>
+                <TableColumn text="Unit" fx:id="unitCol" prefWidth="100.0"/>
+                <TableColumn text="Total Bill" fx:id="totalBillCol" prefWidth="100.0"/>
+                <TableColumn text="Status" fx:id="statusCol" prefWidth="150.0"/>
+            </columns>
+        </TableView>
+    </children>
+
+    <Button text="Print" fx:id="print" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="60.0" prefWidth="150.0" prefHeight="30.0" style="-fx-font-size: 25px; -fx-font-family: 'Times New Roman'; -fx-background-color: #000000; -fx-text-fill: #FFFFFF;" onAction="#handleActionButton"/>
+    <Button text="Reset" fx:id="Reset" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="450.0"  prefWidth="150.0" prefHeight="30.0" style="-fx-font-size: 25px; -fx-font-family: 'Times New Roman'; -fx-background-color: #000000; -fx-text-fill: #FFFFFF" onAction="#handleActionButton"/>
+    <Button text="Close" fx:id="close" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="60.0" prefWidth="150.0" prefHeight="30.0" style="-fx-font-size: 25px; -fx-font-family: 'Times New Roman'; -fx-background-color: #000000; -fx-text-fill: #FFFFFF;" onAction="#handleActionButton"/>
+
+
+
+</AnchorPane>

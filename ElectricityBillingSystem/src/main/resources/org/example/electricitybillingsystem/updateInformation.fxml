@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Rectangle?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.electricitybillingsystem.updateInformation"
+            prefHeight="670.0" prefWidth="1050.0" style="-fx-background-color: #99FFFF">
+    <children>
+        <Label text="Update Information" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" style="-fx-font-size: 70px; -fx-font-family: 'Times New Roman'; -fx-underline: true; -fx-text-fill: #FF0000;" alignment="CENTER"/>
+
+        <Label text="Name: " layoutX="50.0" layoutY="170.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <Label fx:id="nameLabel" layoutX="380.0" layoutY="170.0" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Meter Number: " layoutX="50.0" layoutY="220.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="meterTextField" promptText="Enter Meter Number" layoutX="300.0" layoutY="220.0" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Address" layoutX="50.0" layoutY="270.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="addressText" layoutX="300" layoutY="270" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="City" layoutX="50.0" layoutY="320.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="cityText" layoutX="300" layoutY="320" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="State" layoutX="50.0" layoutY="370.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="stateText" layoutX="300" layoutY="370" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Email" layoutX="50.0" layoutY="420.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="emailText" layoutX="300" layoutY="420" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <Label text="Phone" layoutX="50.0" layoutY="470.0" style="-fx-font-size: 30px; -fx-font-family: 'Times New Roman';"/>
+        <TextField fx:id="phoneText" layoutX="300" layoutY="470" prefWidth="225.0" prefHeight="30.0" style="-fx-font-size: 20px; -fx-font-family: 'Times New Roman';"/>
+
+        <StackPane layoutX="650.0" layoutY="190.0">
+            <ImageView fitHeight="300" fitWidth="300">
+                <clip>
+                    <Rectangle arcWidth="150" arcHeight="150" width="300" height="300" />
+                </clip>
+                <image>
+                    <Image url="@icon/update.jpg" />
+                </image>
+            </ImageView>
+        </StackPane>
+
+
+        <Button text="Update" fx:id="Update" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="60.0" prefWidth="150.0" prefHeight="30.0" style="-fx-font-size: 25px; -fx-font-family: 'Times New Roman'; -fx-background-color: green; -fx-text-fill: #FFFFFF;" onAction="#handleButton"/>
+        <Button text="Close" fx:id="Close" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="60.0" prefWidth="150.0" prefHeight="30.0" style="-fx-font-size: 25px; -fx-font-family: 'Times New Roman'; -fx-background-color: green; -fx-text-fill: #FFFFFF;" onAction="#handleButton"/>
+
+    </children>
+
+</AnchorPane>
